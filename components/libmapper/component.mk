@@ -1,3 +1,8 @@
+COMPAT_OBJS := $(patsubst $(COMPONENT_PATH)/%.c,%.o,$(wildcard $(COMPONENT_PATH)/compat_idf/src/*.c))
+LIBLO_OBJS := $(patsubst $(COMPONENT_PATH)/%.c,%.o,$(wildcard $(COMPONENT_PATH)/liblo/src/*.c))
+LIBMAPPER_OBJS := $(patsubst $(COMPONENT_PATH)/%.c,%.o,$(wildcard $(COMPONENT_PATH)/libmapper/src/*.c))
+
 COMPONENT_SRCDIRS := compat_idf/src liblo/src libmapper/src zlib
-COMPONENT_EXTRA_INCLUDES := $(COMPONENT_PATH)/compat_idf/include $(COMPONENT_PATH)/zlib $(COMPONENT_PATH)/liblo $(COMPONENT_PATH)/libmapper/include
-CPPFLAGS += -DHAVE_CONFIG_H -include $(COMPONENT_PATH)/compat_idf/include/compat.h
+COMPONENT_OBJS := $(COMPAT_OBJS) $(LIBLO_OBJS) $(LIBMAPPER_OBJS) zlib/crc32.o
+COMPONENT_ADD_INCLUDEDIRS := compat_idf/include zlib liblo libmapper/include
+CPPFLAGS += -DHAVE_CONFIG_H -include $(COMPONENT_PATH)/compat_idf/include/compat.h -Wno-char-subscripts -Wno-maybe-uninitialized
