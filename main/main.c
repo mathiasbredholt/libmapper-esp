@@ -2,14 +2,19 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
 #include "mpr/mpr.h"
+
+void wifi_init_sta();
 
 void handler(mpr_sig sig, mpr_sig_evt evt, mpr_id inst, int length,
              mpr_type type, const void *value, mpr_time time) {
-    printf("%d\n", *((int*) value));
+  printf("%d\n", *((int *)value));
 }
 
 void app_main() {
+  wifi_init_sta();
+
   mpr_dev dev = mpr_dev_new("test", 0);
   mpr_sig sig1 = mpr_sig_new(dev, MPR_DIR_IN, "input", 1, MPR_INT32, 0, 0, 0, 0,
                              handler, MPR_SIG_UPDATE);

@@ -16,4 +16,4 @@ set(COMPAT_SRCS compat_idf/src/gai_strerror.c compat_idf/src/gethostname.c compa
 set(ZLIB_SRCS zlib/crc32.c)
 idf_component_register(SRCS ${LIBMAPPER_SRCS} ${LIBLO_SRCS} ${COMPAT_SRCS} ${ZLIB_SRCS}
                        INCLUDE_DIRS compat_idf/include zlib liblo libmapper/include)
-target_compile_options(${COMPONENT_LIB} PRIVATE -DHAVE_CONFIG_H -include${compat_include} -w)
+target_compile_options(${COMPONENT_LIB} PRIVATE -DHAVE_CONFIG_H -DDEBUG -include${compat_include} -w)
