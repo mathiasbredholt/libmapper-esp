@@ -1,6 +1,6 @@
 [submodule "libmapper"]
 	path = components/libmapper/libmapper
-	url = https://github.com/libmapper/libmapper.git
+	url = https://github.com/mathiasbredholt/libmapper.git
 [submodule "liblo"]
 	path = components/libmapper/liblo
 	url = https://github.com/radarsat1/liblo.git
