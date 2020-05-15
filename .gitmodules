@@ -1,14 +1,14 @@
 [submodule "libmapper"]
-	path = components/libmapper/libmapper
+	path = libmapper
 	url = https://github.com/mathiasbredholt/libmapper.git
 [submodule "liblo"]
-	path = components/libmapper/liblo
+	path = liblo
 	url = https://github.com/radarsat1/liblo.git
 [submodule "zlib"]
-	path = components/libmapper/zlib
+	path = zlib
 	url = https://github.com/madler/zlib.git
 [submodule "compat_idf"]
-	path = components/libmapper/compat_idf
+	path = compat_idf
 	url = https://github.com/mathiasbredholt/compat_idf.git
 [submodule "components/libmapper/libmapper"]
 	branch = v2-devel
