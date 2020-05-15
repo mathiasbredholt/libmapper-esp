@@ -1,4 +1,4 @@
-# libmapper_idf
+# libmapper-idf
 libmapper esp-idf component
 
 ### Info
