@@ -7,8 +7,11 @@
 [submodule "zlib"]
 	path = zlib
 	url = https://github.com/madler/zlib.git
-[submodule "compat_idf"]
-	path = compat_idf
-	url = https://github.com/mathiasbredholt/compat_idf.git
 [submodule "components/libmapper/libmapper"]
 	branch = v2-devel
+[submodule "libmapper-idf"]
+	path = libmapper-idf
+	url = https://github.com/mathiasbredholt/libmapper-idf.git
+[submodule "compat-idf"]
+	path = compat-idf
+	url = https://github.com/mathiasbredholt/compat-idf.git
