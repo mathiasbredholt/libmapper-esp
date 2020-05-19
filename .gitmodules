@@ -9,9 +9,6 @@
 	url = https://github.com/madler/zlib.git
 [submodule "components/libmapper/libmapper"]
 	branch = v2-devel
-[submodule "libmapper-idf"]
-	path = libmapper-idf
-	url = https://github.com/mathiasbredholt/libmapper-idf.git
 [submodule "compat-idf"]
 	path = compat-idf
 	url = https://github.com/mathiasbredholt/compat-idf.git
