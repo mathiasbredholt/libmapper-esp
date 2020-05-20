@@ -1,4 +1,4 @@
-# libmapper-idf
+# libmapper-idf <img style="float:right;padding:10px" src="http://libmapper.github.io/images/libmapper_logo_black_512px.png" width="100">
 libmapper esp-idf component
 
 ### Info
