@@ -1,6 +1,3 @@
-[submodule "libmapper"]
-	path = libmapper
-	url = https://github.com/mathiasbredholt/libmapper.git
 [submodule "liblo"]
 	path = liblo
 	url = https://github.com/radarsat1/liblo.git
@@ -12,3 +9,7 @@
 [submodule "compat-idf"]
 	path = compat-idf
 	url = https://github.com/mathiasbredholt/compat-idf.git
+[submodule "libmapper"]
+	path = libmapper
+	url = https://github.com/libmapper/libmapper.git
+	branch = v2-devel
