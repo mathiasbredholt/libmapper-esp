@@ -98,7 +98,7 @@
 #define PACKAGE_NAME "libmpr"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libmpr 1.2"
+#define PACKAGE_STRING "libmpr 1.2-96-g6f8497df"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libmpr"
@@ -107,7 +107,10 @@
 #define PACKAGE_URL "http://libmapper.org"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.2"
+#define PACKAGE_VERSION "1.2-96-g6f8497df"
+
+/* printf code for type long long int */
+#define PRINTF_LL "ll"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -117,7 +120,7 @@
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "1.2"
+#define VERSION "1.2-96-g6f8497df"
 
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */
