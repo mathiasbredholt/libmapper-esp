@@ -4,12 +4,9 @@
 [submodule "zlib"]
 	path = zlib
 	url = https://github.com/madler/zlib.git
-[submodule "components/libmapper/libmapper"]
-	branch = v2-devel
+[submodule "libmapper"]
+	branch = maplooper
+	url = https://github.com/mathiasbredholt/libmapper.git
 [submodule "compat-idf"]
 	path = compat-idf
 	url = https://github.com/mathiasbredholt/compat-idf.git
-[submodule "libmapper"]
-	path = libmapper
-	url = https://github.com/libmapper/libmapper.git
-	branch = v2-devel
