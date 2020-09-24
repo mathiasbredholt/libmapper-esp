@@ -11,3 +11,4 @@
 [submodule "compat-idf"]
 	path = compat-idf
 	url = https://github.com/mathiasbredholt/compat-idf.git
+  branch = v4.0
