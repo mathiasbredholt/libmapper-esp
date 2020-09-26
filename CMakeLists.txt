@@ -17,7 +17,7 @@ add_custom_command(OUTPUT liblo/lo/lo_endian.h
                    COMMAND cp lo_endian.h liblo/lo/lo_endian.h
                    WORKING_DIRECTORY ${COMPONENT_DIR})
 add_custom_command(OUTPUT libmapper/src/config.h
-                   COMMAND cp libmpr_config.h libmapper/src/config.h
+                   COMMAND cp libmapper_config.h libmapper/src/config.h
                    WORKING_DIRECTORY ${COMPONENT_DIR})
 
 add_custom_target(libmpr_config_headers DEPENDS liblo/config.h liblo/lo/lo.h liblo/lo/lo_endian.h libmapper/src/config.h)
