@@ -7,7 +7,7 @@ idf_component_register(SRCS ${LIBMAPPER_SRCS} ${LIBLO_SRCS} ${COMPAT_SRCS} ${ZLI
                        INCLUDE_DIRS compat-idf/include zlib liblo libmapper/include)
 target_compile_options(${COMPONENT_LIB} PRIVATE -DHAVE_CONFIG_H -DDEBUG -include${compat_include} -w)
 
-configure_file(liblo_config.h liblo/config.h COPYONLY)
-configure_file(lo.h liblo/lo/lo.h COPYONLY)
-configure_file(lo_endian.h liblo/lo/lo_endian.h COPYONLY)
-configure_file(libmapper_config.h libmapper/src/config.h COPYONLY)
+file(COPY liblo_config.h DESTINATION liblo/config.h)
+file(COPY lo.h DESTINATION liblo/lo/lo.h)
+file(COPY lo_endian.h DESTINATION liblo/lo/lo_endian.h)
+file(COPY libmapper_config.h DESTINATION libmapper/src/config.h)
