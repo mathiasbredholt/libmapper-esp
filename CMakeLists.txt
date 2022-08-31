@@ -7,18 +7,7 @@ idf_component_register(SRCS ${LIBMAPPER_SRCS} ${LIBLO_SRCS} ${COMPAT_SRCS} ${ZLI
                        INCLUDE_DIRS compat-idf/include zlib liblo libmapper/include)
 target_compile_options(${COMPONENT_LIB} PRIVATE -DHAVE_CONFIG_H -DDEBUG -include${compat_include} -w)
 
-add_custom_command(OUTPUT liblo/config.h
-                   COMMAND cp liblo_config.h liblo/config.h
-                   WORKING_DIRECTORY ${COMPONENT_DIR})
-add_custom_command(OUTPUT liblo/lo/lo.h
-                   COMMAND cp lo.h liblo/lo/lo.h
-                   WORKING_DIRECTORY ${COMPONENT_DIR})
-add_custom_command(OUTPUT liblo/lo/lo_endian.h
-                   COMMAND cp lo_endian.h liblo/lo/lo_endian.h
-                   WORKING_DIRECTORY ${COMPONENT_DIR})
-add_custom_command(OUTPUT libmapper/src/config.h
-                   COMMAND cp libmapper_config.h libmapper/src/config.h
-                   WORKING_DIRECTORY ${COMPONENT_DIR})
-
-add_custom_target(libmpr_config_headers DEPENDS liblo/config.h liblo/lo/lo.h liblo/lo/lo_endian.h libmapper/src/config.h)
-add_dependencies(${COMPONENT_LIB} libmpr_config_headers)
+configure_file(liblo_config.h liblo/config.h COPYONLY)
+configure_file(lo.h liblo/lo/lo.h COPYONLY)
+configure_file(lo_endian.h liblo/lo/lo_endian.h COPYONLY)
+configure_file(libmapper_config.h libmapper/src/config.h COPYONLY)
